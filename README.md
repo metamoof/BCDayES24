@@ -17,6 +17,3 @@ Esta carpeta contiene todo lo necesario para ejecutar el azure functions
 ## Enlaces
 
 https://github.com/metamoof/msgraphhelper - Librería para trabajar con Microsoft Graph en Python - usado para el acceso a la API de BC
-https://ngrok.com/ - utilidad para exponer un azure functions en local al internet y así poder subscribirse
-
-# Como ejecutar Azure functions en local
