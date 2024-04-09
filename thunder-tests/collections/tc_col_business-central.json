@@ -1,0 +1,410 @@
+{
+    "_id": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+    "colName": "Business Central",
+    "created": "2024-03-29T15:23:29.145Z",
+    "sortNum": 10000,
+    "folders": [
+        {
+            "_id": "e9d9f7fa-530f-4a86-9257-cdc380259c5d",
+            "name": "Automation Companies",
+            "containerId": "",
+            "created": "2024-03-29T15:23:59.635Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "a8435e0e-c417-4b51-a151-c0e5ebb662e7",
+            "name": "Environments",
+            "containerId": "",
+            "created": "2024-03-29T15:35:33.126Z",
+            "sortNum": 5000
+        },
+        {
+            "_id": "f55de5af-7355-4ae6-b2bb-d30c6a634c20",
+            "name": "Configuration Packages",
+            "containerId": "",
+            "created": "2024-03-29T17:31:37.940Z",
+            "sortNum": 15000
+        },
+        {
+            "_id": "62d612c6-32c2-4610-b9cb-d3095fde56f8",
+            "name": "Scheduled Jobs",
+            "containerId": "",
+            "created": "2024-03-29T18:05:16.931Z",
+            "sortNum": 20000
+        },
+        {
+            "_id": "b142ca4b-371b-4f47-9d6b-b98d880dbf3e",
+            "name": "Sales Orders",
+            "containerId": "",
+            "created": "2024-04-01T14:01:49.200Z",
+            "sortNum": 30000
+        },
+        {
+            "_id": "1310b7f8-87dd-42df-add6-9ea945ed4b0d",
+            "name": "Purchase Orders",
+            "containerId": "",
+            "created": "2024-04-01T14:09:00.471Z",
+            "sortNum": 40000
+        },
+        {
+            "_id": "25b58ba2-4821-4fd6-a8aa-7909a00367df",
+            "name": "Items",
+            "containerId": "",
+            "created": "2024-04-01T14:37:14.934Z",
+            "sortNum": 50000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "ef988f11-2559-4764-bb44-22cfa4f88e11",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "e9d9f7fa-530f-4a86-9257-cdc380259c5d",
+            "name": "Get Automation Companies",
+            "url": "api/microsoft/automation/v2.0/companies",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-03-29T15:24:11.998Z",
+            "modified": "2024-03-29T17:06:43.498Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "47c8faa6-c253-4eec-9cac-01ebad543fb6",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "e9d9f7fa-530f-4a86-9257-cdc380259c5d",
+            "name": "Create Automation Company",
+            "url": "api/microsoft/automation/v2.0/companies(8f8b9802-b3d3-ee11-9050-6045bdc89e4e)/automationCompanies",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-03-29T16:24:36.542Z",
+            "modified": "2024-03-29T16:27:20.124Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"TEST1\",\n  \"displayName\": \"Test Company 1\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1092be01-f9be-49db-9fad-be2e6b05f2c3",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "f55de5af-7355-4ae6-b2bb-d30c6a634c20",
+            "name": "Create Config Package",
+            "url": "api/microsoft/automation/v2.0/companies(861afa10-e9ed-ee11-a1fd-000d3aae0b7f)/configurationPackages",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-03-29T17:31:53.122Z",
+            "modified": "2024-03-29T17:33:26.319Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"code\": \"ES.ESP.STANDARD\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "94f67637-2f00-41bc-8c99-38b26dedd33d",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "f55de5af-7355-4ae6-b2bb-d30c6a634c20",
+            "name": "Upload Config Package",
+            "url": "api/microsoft/automation/v2.0/companies(861afa10-e9ed-ee11-a1fd-000d3aae0b7f)/configurationPackages(981d1873-f2ed-ee11-a1fd-000d3aae0b7f)/file('ES.ESP.STANDARD')/content",
+            "method": "PATCH",
+            "sortNum": 60000,
+            "created": "2024-03-29T17:33:31.857Z",
+            "modified": "2024-03-29T17:44:40.192Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/octet-stream"
+                },
+                {
+                    "name": "If-Match",
+                    "value": "*"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "binary",
+                "raw": "",
+                "form": [],
+                "binary": "../PackageES.ESP.STANDARD.rapidstart"
+            },
+            "tests": []
+        },
+        {
+            "_id": "9d09043a-9207-442e-9193-b1b4a0e6ebfa",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "f55de5af-7355-4ae6-b2bb-d30c6a634c20",
+            "name": "Get Config Package",
+            "url": "api/microsoft/automation/v2.0/companies(861afa10-e9ed-ee11-a1fd-000d3aae0b7f)/configurationPackages(981d1873-f2ed-ee11-a1fd-000d3aae0b7f)",
+            "method": "GET",
+            "sortNum": 55000,
+            "created": "2024-03-29T17:43:00.600Z",
+            "modified": "2024-03-29T18:21:10.235Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "857b1c2a-3430-4649-8521-c693fdb12ab7",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "62d612c6-32c2-4610-b9cb-d3095fde56f8",
+            "name": "Get scheduled jobs",
+            "url": "api/microsoft/automation/v2.0/companies(9022124d-f6ed-ee11-a1fd-000d3aae0b7f)/scheduledJobs(177a7b1c-0c5b-41f9-9717-50a2f08e70a9)",
+            "method": "GET",
+            "sortNum": 60000,
+            "created": "2024-03-29T18:05:37.446Z",
+            "modified": "2024-03-29T18:18:15.221Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "cceae637-f2db-41cc-a27d-cf73bfa57b52",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "b142ca4b-371b-4f47-9d6b-b98d880dbf3e",
+            "name": "Get Sales Orders",
+            "url": "api/v2.0/companies({{Company ID}})/salesOrders?$expand=salesOrderLines",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-04-01T14:03:05.870Z",
+            "modified": "2024-04-01T14:54:28.537Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "$expand",
+                    "value": "salesOrderLines",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "7427b22a-8bc1-4a75-aba0-d5a047d8fd32",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "1310b7f8-87dd-42df-add6-9ea945ed4b0d",
+            "name": "Get Purchase Orders",
+            "url": "api/v2.0/companies({{Company ID}})/purchaseOrders?$expand=purchaseOrderLines",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-04-01T14:09:07.683Z",
+            "modified": "2024-04-01T14:09:33.369Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "$expand",
+                    "value": "purchaseOrderLines",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "6ac48acc-4f66-49ad-b358-7a09a47e4b3f",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "1310b7f8-87dd-42df-add6-9ea945ed4b0d",
+            "name": "Get OData Purchase Order Lines",
+            "url": "ODataV4/Company('ShipShop%203')/PurchaseOrderLines",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-04-01T14:15:51.203Z",
+            "modified": "2024-04-01T14:16:05.786Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a781de89-733f-45d2-aae0-7331e551cbe2",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "25b58ba2-4821-4fd6-a8aa-7909a00367df",
+            "name": "Get Items",
+            "url": "api/v2.0/companies({{Company ID}})/items?$expand=*",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-04-01T14:37:24.913Z",
+            "modified": "2024-04-01T14:37:51.045Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "$expand",
+                    "value": "*",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "5b86cffd-59ba-4558-86c1-adb34338c52b",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "25b58ba2-4821-4fd6-a8aa-7909a00367df",
+            "name": "Get Purchase Prices",
+            "url": "ODataV4/Company('ShipShop%203')/PurchasePrices",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-04-01T14:46:53.977Z",
+            "modified": "2024-04-01T14:47:06.222Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "7c506f59-e5f5-44db-87e1-6635b5d9f789",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "25b58ba2-4821-4fd6-a8aa-7909a00367df",
+            "name": "Get OData ItemVariants",
+            "url": "ODataV4/Company('ShipShop%203')/ItemVariants",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-04-01T17:54:33.558Z",
+            "modified": "2024-04-01T17:54:58.269Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f25abe1d-3f9d-4e53-ac3b-573d2f2bc124",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "",
+            "name": "Metadata",
+            "url": "https://api.businesscentral.dynamics.com/v2.0/387b1004-6025-4717-a12c-8b7987c3d014/BCDayES/ODataV4/$metadata",
+            "method": "GET",
+            "sortNum": 120000,
+            "created": "2024-04-01T18:07:37.840Z",
+            "modified": "2024-04-01T18:07:42.855Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "b7a38565-1695-4c39-b587-e9340d319430",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "",
+            "name": "Customers",
+            "url": "api/v2.0/companies({{Company ID}})/customers?$expand=*",
+            "method": "GET",
+            "sortNum": 130000,
+            "created": "2024-04-06T17:19:50.769Z",
+            "modified": "2024-04-06T17:20:17.276Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "$expand",
+                    "value": "*",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "14b356fd-c271-481a-8633-eee837a3d3c0",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "",
+            "name": "Tax Areas",
+            "url": "api/v2.0/companies({{Company ID}})/taxAreas",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2024-04-06T17:22:56.064Z",
+            "modified": "2024-04-06T17:34:04.559Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "11da8b52-8561-43e9-9e0e-c63fbeee3b58",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "",
+            "name": "API Batch",
+            "url": "/ODataV4/$batch",
+            "method": "POST",
+            "sortNum": 150000,
+            "created": "2024-04-06T18:06:12.817Z",
+            "modified": "2024-04-06T18:33:47.140Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                },
+                {
+                    "name": "Isolation",
+                    "value": "snapshot"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"requests\": [\n    {\n      \"method\": \"GET\",\n      \"id\": \"ggg\",\n      \"url\": \"Company('ShipShop 10')/Job_List\"\n    },\n    {\n      \"method\": \"POST\",\n      \"id\": \"post_customer_0\",\n      \"url\": \"Company('ShipShop 10')/Plan_de_cuentas\",\n      \"headers\": {\n        \"Content-Type\": \"application/json\"\n      },\n      \"body\": {\n        \"diplayName\": \"Isaksson & Jonsson HB\",\n        \"type\": \"Person\",\n        \"addressLine1\": \"Skogsgrand 53\",\n        \"city\": \"Vaxjo\",\n        \"country\": \"SE\",\n        \"postalCode\": \"13702\",\n        \"email\": \"oscar88@example.net\",\n        \"website\": \"https://www.larsson.com/\",\n        \"taxRegistrationNumber\": \"361119-2448\",\n        \"taxAreaId\": \"515a8c56-3ef4-ee11-a1fd-000d3a2df93c\"\n      }\n    }\n  ]\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4a64dbcf-3e37-4d1e-a889-e6d1d88b0a81",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "",
+            "name": "Customers Copy",
+            "url": "api/v2.0/companies(9a2338aa-3df4-ee11-a1fd-000d3abb119f)/customers",
+            "method": "POST",
+            "sortNum": 135000,
+            "created": "2024-04-06T18:34:28.772Z",
+            "modified": "2024-04-06T18:44:33.741Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"displayName\": \"Valentin Ltd\",\n  \"type\": \"Person\",\n  \"addressLine1\": \"0718 Kathleen Tunnel\",\n  \"city\": \"Ingridhaven\",\n  \"country\": \"US\",\n  \"postalCode\": \"64183\",\n  \"email\": \"wmotte@example.org\",\n  \"website\": \"https://www.fabry.info/\",\n  \"taxAreaId\": \"4f5a8c56-3ef4-ee11-a1fd-000d3a2df93c\",\n  \"taxRegistrationNumber\": \"\",\n  \"blocked\": \" \"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "dd5efd0f-e6ea-4c8e-be0c-622fd0027213",
+            "colId": "adbe8b90-ccc9-42d5-ae1e-1e8c546fd104",
+            "containerId": "",
+            "name": "Customers Copy Copy",
+            "url": "api/v2.0/companies(9a2338aa-3df4-ee11-a1fd-000d3abb119f)/customers",
+            "method": "POST",
+            "sortNum": 137500,
+            "created": "2024-04-06T18:47:38.024Z",
+            "modified": "2024-04-06T18:48:31.381Z",
+            "headers": [
+                {
+                    "name": "Content-Type",
+                    "value": "application/json"
+                }
+            ],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"diplayName\": \"PPUH Dębosz-Tworzydło i syn s.c.\",\n  \"type\": \"Person\",\n  \"addressLine1\": \"pl. Miarki 14\",\n  \"city\": \"Luboń\",\n  \"country\": \"US\",\n  \"postalCode\": \"59-866\",\n  \"email\": \"nszmagaj@example.net\",\n  \"website\": \"http://ppuh.pl/\",\n  \"taxRegistrationNumber\": \"93052251623\",\n  \"taxAreaId\": \"515a8c56-3ef4-ee11-a1fd-000d3a2df93c\",\n  \"blocked\": \" \"\n}",
+                "form": []
+            },
+            "tests": []
+        }
+    ],
+    "settings": {
+        "auth": {
+            "type": "oauth2",
+            "oauth2": {
+                "grantType": "client_credentials",
+                "tokenUrl": "https://login.microsoftonline.com/{{Azure Tenant}}/oauth2/v2.0/token",
+                "clientId": "{{BC Client ID }}",
+                "clientSecret": "{{BC Client Secret}}",
+                "clientAuth": "in-header",
+                "scope": "https://api.businesscentral.dynamics.com/.default"
+            }
+        },
+        "options": {
+            "baseUrl": "https://api.businesscentral.dynamics.com/v2.0/{{Azure Tenant}}/{{BC Environment}}/"
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "_id": "6535253e-b240-4c6c-80ce-6a2b80665e95",
+    "name": "Admin",
+    "default": true,
+    "sortNum": 10000,
+    "created": "2024-03-29T15:19:25.778Z",
+    "modified": "2024-03-29T15:19:25.778Z",
+    "data": [
+        {
+            "name": "BC Client ID ",
+            "value": "{{Azure Client ID - Giles}} "
+        },
+        {
+            "name": "BC Client Secret",
+            "value": "{{Azure Client Secret - Giles}}"
+        },
+        {
+            "name": "Azure Tenant",
+            "value": "387b1004-6025-4717-a12c-8b7987c3d014"
+        },
+        {
+            "name": "BC Environment",
+            "value": "BCDayES"
+        }
+    ]
+}
