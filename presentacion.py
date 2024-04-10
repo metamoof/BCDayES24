@@ -27,7 +27,7 @@ dotenv.load_dotenv()
 scope = "https://api.businesscentral.dynamics.com/.default"
 tenant = os.environ["AZURE_TENANT_ID"]
 environment = os.environ["BC_ENVIRONMENT"]
-company = "PITONESA 01"
+company = "PITONESA 06"
 
 
 credential = DefaultAzureCredential()
